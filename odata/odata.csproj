@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>9a9f7bea-0a85-4ff6-876f-b9a4787a61eb</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.5.*" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.*" />
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="8.0.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.*" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.*" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\odata.models\odata.models.csproj" />
+    <ProjectReference Include="..\odata.repository\odata.repository.csproj" />
+  </ItemGroup>
+
+</Project>
