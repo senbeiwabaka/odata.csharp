@@ -5,9 +5,14 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "odata", "odata\odata.csproj", "{06E0CCAD-1F95-4E5D-B324-01D2925870D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "odata.repository", "odata.repository\odata.repository.csproj", "{2821B6B0-BA28-4A81-AB25-D64831D68E35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "odata.repository", "odata.repository\odata.repository.csproj", "{2821B6B0-BA28-4A81-AB25-D64831D68E35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "odata.models", "odata.models\odata.models.csproj", "{C3B2435E-C13E-4FA7-A60A-7BE45347B1A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "odata.models", "odata.models\odata.models.csproj", "{C3B2435E-C13E-4FA7-A60A-7BE45347B1A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9774B258-9908-470F-ACF3-35C958E6EF2D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

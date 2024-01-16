@@ -67,15 +67,9 @@ using (var scope = app.Services.CreateScope())
 
     await context.Database.EnsureCreatedAsync();
 
-    if (!string.IsNullOrWhiteSpace(app.Configuration.GetConnectionString("MSSQL")))
-    {
-        await context.Database.MigrateAsync();
-    }
-    else if (!string.IsNullOrWhiteSpace(app.Configuration.GetConnectionString("Postgres")))
-    {
-        await context.Database.MigrateAsync();
-    }
-    else if (app.Configuration.GetValue<bool>("UseSqllite"))
+    if (!string.IsNullOrWhiteSpace(app.Configuration.GetConnectionString("MSSQL"))
+        || !string.IsNullOrWhiteSpace(app.Configuration.GetConnectionString("Postgres")) 
+        || app.Configuration.GetValue<bool>("UseSqllite"))
     {
         await context.Database.MigrateAsync();
     }
@@ -105,6 +99,7 @@ app.UseODataBatching();
 app.UseRouting();
 
 //app.UseAuthorization();
+//app.UseAuthentication();
 
 app.UseEndpoints(endpoints =>
 {
